@@ -111,7 +111,7 @@ app.frame('/', async (c) => {
       <Box height="100%" width="100%" backgroundSize="816px 426px" backgroundRepeat='no-repeat' backgroundImage={`url("${SITE_URL}/author.png")`}> </Box>
     ),
     intents: [
-      <Button action={action} value='/'>Check $ENJOY Start</Button>
+      <Button action={action} value='/'>Check $BUILD Start</Button>
     ],
   })
 })
@@ -161,7 +161,7 @@ app.frame('/:fid/:secret', async (c) => {
       image: (<Box height="100%" width="100%" backgroundSize="816px 426px" backgroundRepeat='no-repeat' backgroundImage={`url("${SITE_URL}/404.png")`}> </Box>),
       intents: [
         <Button action={action} value='/'>Reload!</Button>,
-        <Button.Link href="https://warpcast.com/dangs.eth">Follow Now!</Button.Link>
+        <Button.Link href="https://warpcast.com/dangs.eth">Follow Dangs!</Button.Link>
       ],
     })
   }

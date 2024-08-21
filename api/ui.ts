@@ -17,7 +17,7 @@ export const {
 } = createSystem({
     colors: {
       text: '#000000',
-      main: '#1fa3f5',
+      main: '#0142f5',
       background: '#ffffff',
       green: '#00ff00',
       white: '#ffffff',
