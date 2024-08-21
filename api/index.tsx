@@ -116,6 +116,26 @@ app.frame('/', async (c) => {
   })
 })
 
+app.frame('/bg/:secret', async (c) => {  
+  console.log(1);
+  
+  const { frameData } = c
+  const { fid } = frameData || {} 
+
+  const ids = MakeID(7);
+
+  const action = `/${fid || 0}/dangs${ids}`;
+
+  return c.res({
+    image: (
+      <Box height="100%" width="100%" backgroundSize="816px 426px" backgroundRepeat='no-repeat' backgroundImage={`url("${SITE_URL}/author.png")`}> </Box>
+    ),
+    intents: [
+      <Button action={action} value='/'>Check $BUILD Start</Button>
+    ],
+  })
+})
+
 app.frame('/:fid/:secret', async (c) => {
 
   const { req, frameData } = c
