@@ -91,9 +91,9 @@ async function checkFollowed(username:string) {
   var { result } = JSON.parse(await res.text()) || {};
   var { user } = result || {};
   var { viewerContext } = user || {};
-  var { following } = viewerContext || false;
+  var { followedBy } = viewerContext || false;
 
-  return following;
+  return followedBy;
 }
 
 app.frame('/', async (c) => {
